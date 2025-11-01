@@ -73,14 +73,14 @@ def handle_client(client_socket :socket.socket, client_address :tuple, client_co
                 logging.info("Sending Random number")
                 client_socket.send(rand().encode())
             elif command == 'EXIT':
-                logging.error("Client closed connection")
+                logging.info("Client closed connection")
                 client_socket.send('GoodBye!'.encode())
                 break
             else:
                 logging.info("Invalid command")
                 client_socket.send("Invalid command".encode())
     except socket.error as msg:
-        logging.error('received socket error ' + str(msg))
+        logging.info('received socket error ' + str(msg))
     finally:
         logging.info("finished with client number: " + str(client_counter))
         client_socket.close()
