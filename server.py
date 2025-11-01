@@ -21,7 +21,6 @@ MAX_PACKET = 4
 HOST = '0.0.0.0'
 PORT = 6767
 SERVER_NAME = 'Alon_server'
-EXAMPLE = "ABCD" #just need 4 bytes
 
 
 def time() -> str:
